@@ -1,4 +1,3 @@
-//jshint esversion:6
 
 const express = require("express");
 const bodyParser = require("body-parser");
@@ -12,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://hamzaAdmin:test123@cluster0.bfmhn.mongodb.net/todolistv2DB?retryWrites=true&w=majority", {useNewUrlParser: true});
+mongoose.connect("mongodb://localhost/vidly", {useNewUrlParser: true});
 
 const itemsSchema = {
   name: String
